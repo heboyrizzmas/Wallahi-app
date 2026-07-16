@@ -1,0 +1,37 @@
+name: TaskFlow
+options:
+  bundleIdPrefix: com.taskflow.app
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  TaskFlow:
+    type: application
+    platform: iOS
+    sources:
+      - path: AddTaskView.swift
+      - path: ContentView.swift
+      - path: LocationPickerView.swift
+      - path: NotificationManager.swift
+      - path: TaskCardView.swift
+      - path: TaskFlowApp.swift
+      - path: TaskItem.swift
+      - path: TaskStore.swift
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen: {}
+        CFBundleDisplayName: TaskFlow
+        NSLocationWhenInUseUsageDescription: "TaskFlow uses your location to help you pick and find task locations on the map."
+        NSLocationAlwaysAndWhenInUseUsageDescription: "TaskFlow uses your location to help you pick and find task locations on the map."
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.taskflow.app.TaskFlow
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
+        DEVELOPMENT_TEAM: ""
